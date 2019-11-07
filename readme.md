@@ -147,8 +147,7 @@
   4. 4、如果交换后组一的总分数大于平均数，那么进行交换，直至出现临界值，当组一的总分数小于平均分值，即分组成功 
 
     + 1、<!--要注意分组中负数的存在，负数会越加越小。-->
-        	
-        	    			+ 2、<!--为什么用组一的分值最小的选手去和组二中分值最大的选手进行交换-->
+    + 2、<!--为什么用组一的分值最小的选手去和组二中分值最大的选手进行交换-->
 
     ​			 因为可以使组一的分值缓慢下降，直至出现组一的分值大于平均值。 否则快速下降，很难确定临界值。
 
@@ -157,7 +156,7 @@
 
 ##### [代码链接](https://github.com/kong0827/practise_monthly/tree/master/Grouping)
 
-​			 https://github.com/kong0827/practise_monthly/tree/master/Grouping 
+​		 https://github.com/kong0827/practise_monthly/tree/master/Grouping 
 
 
 
