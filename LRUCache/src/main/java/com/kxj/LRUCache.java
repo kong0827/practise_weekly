@@ -1,6 +1,5 @@
-package com.kxj.algorithms;
+package com.kxj;
 
-import sun.plugin2.message.GetAppletMessage;
 
 /**
  * @ClassName LRUCache

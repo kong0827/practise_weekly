@@ -1,6 +1,5 @@
 package com.kxj;
 
-import com.kxj.algorithms.LRUCache;
 import org.junit.Assert;
 import org.junit.Test;
 
