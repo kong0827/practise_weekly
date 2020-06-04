@@ -12,6 +12,9 @@
     <modules>
         <module>LRUCache</module>
         <module>Grouping</module>
+        <module>TwoSum</module>
+        <module>NumberReverse</module>
+        <module>Palindrome</module>
     </modules>
 
     <dependencies>
