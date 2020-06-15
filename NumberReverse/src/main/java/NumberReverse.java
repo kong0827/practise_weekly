@@ -19,7 +19,7 @@
 public class NumberReverse {
 
     public static void main(String[] args) {
-        int reverseNumber = reverse(1534236469);
+        int reverseNumber = reverse2(123);
         System.out.println(reverseNumber);
     }
 
@@ -45,5 +45,34 @@ public class NumberReverse {
             return value;
         }
         return value;
+    }
+
+    public static int reverse2(int x) {
+
+        int value = 0;
+        StringBuilder temp = new StringBuilder();
+
+        if (x < 0) {
+            temp.append("-");
+            getResult(x, temp, 1);
+        } else {
+            getResult(x, temp, 0);
+
+        }
+        try {
+            value = Integer.valueOf(String.valueOf(temp));
+        } catch (Exception e) {
+            return 0;
+        }
+        return value;
+    }
+
+    private static void getResult(int x, StringBuilder temp, int index) {
+        int length = String.valueOf(x).length();
+        for (int i = index; i < length; i++) {
+            int mod = Math.abs(x % 10);
+            temp.append(mod);
+            x = x / 10;
+        }
     }
 }

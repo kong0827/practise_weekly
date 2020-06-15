@@ -1,5 +1,7 @@
 package com.kxj;
 
+import java.beans.beancontext.BeanContext;
+
 /**
  * @author xiangjin.kong
  * @date 2020/6/4 19:20
@@ -22,20 +24,21 @@ package com.kxj;
  */
 public class PalindromeSolution {
     public static void main(String[] args) {
-        boolean palindrome = isPalindrome(123);
-//        System.out.println(palindrome);
+        boolean palindrome = isPalindrome(0);
+        System.out.println(palindrome);
     }
 
     public static boolean isPalindrome(int x) {
-        String str = String.valueOf(x);
-
-        for (int i = 0; i < str.length(); i++) {
-            int temp = x % (str.length() * 10);
-            System.out.println(x + " " + temp);
-            x = x / 10;
+        if (x < 0 || x == 10) {
+            return false;
         }
+        String str = String.valueOf(x);
+        int reverseNumber = 0;
+        for (int i = 0; i < str.length() / 2; i++) {
+            reverseNumber = reverseNumber * 10 + x % 10;
+            x = x / 10;
 
-        return true;
+        }
+        return x == reverseNumber || x / 10 == reverseNumber;
     }
-
 }
