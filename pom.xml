@@ -17,6 +17,7 @@
         <module>Palindrome</module>
         <module>NumberReverseString</module>
         <module>FibonaccSequence</module>
+        <module>NumEquivDominoPairs</module>
     </modules>
 
     <dependencies>
