@@ -22,9 +22,9 @@ import java.util.*;
 public class NumEquivDominoPairsTest {
 
     public static void main(String[] args) {
-//        int[][] dominoes = new int[][]{{1, 2}, {1, 2}, {1, 1}, {1, 2}, {2, 2}};
-        int[][] dominoes = new int[][]{{1, 1}, {2, 2}, {1, 1}, {1, 2}, {1, 2}, {1, 1}};
-        int count = numEquivDominoPairs(dominoes);
+        int[][] dominoes = new int[][]{{1, 2}, {1, 2}, {1, 1}, {1, 2}, {2, 2}, {1, 2}};
+//        int[][] dominoes = new int[][]{{1, 1}, {2, 2}, {1, 1}, {1, 2}, {1, 2}, {1, 1}};
+        int count = numEquivDominoPairs2(dominoes);
         System.out.println(count);
 
     }
@@ -55,6 +55,18 @@ public class NumEquivDominoPairsTest {
         }
         return sum;
     }
+
+
+    public static int numEquivDominoPairs2(int[][] dominoes) {
+        int ans = 0;
+        int[] cp = new int[100];
+        for(int[] arr:dominoes){
+            Arrays.sort(arr);
+            ans+=cp[arr[0]*10+arr[1]]++;
+        }
+        return ans;
+    }
+
 }
 
 /**

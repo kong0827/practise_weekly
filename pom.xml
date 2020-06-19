@@ -18,6 +18,7 @@
         <module>NumberReverseString</module>
         <module>FibonaccSequence</module>
         <module>NumEquivDominoPairs</module>
+        <module>List</module>
     </modules>
 
     <dependencies>
