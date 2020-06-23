@@ -1,7 +1,3 @@
-package com.kxj;
-
-import java.beans.beancontext.BeanContext;
-
 /**
  * @author xiangjin.kong
  * @date 2020/6/4 19:20
