@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Stack;
 
@@ -49,6 +50,7 @@ public class ListFromTailToHead {
         for (Integer integer : list) {
             result.add(integer);
         }
+        Collections.reverse(result);
         return result;
     }
 
@@ -61,7 +63,7 @@ public class ListFromTailToHead {
         listNode3.value = 3;
         listNode1.next = listNode2;
         listNode2.next = listNode3;
-        ArrayList<Integer> integers = printListFromTailToHead(listNode1);
+        ArrayList<Integer> integers = printListFromTailToHead2(listNode1);
         for (Integer integer : integers) {
             System.out.println(integer);
         }
