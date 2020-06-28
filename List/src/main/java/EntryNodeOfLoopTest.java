@@ -39,9 +39,38 @@ public class EntryNodeOfLoopTest {
     }
 
     /**
+     * 方式一：快慢指针
+     */
+    static ListNode entryNodeOfLoop(ListNode pHead){
+        ListNode targetNode = new ListNode(3);
+        if (pHead == null || pHead.next == null) {
+            return null;
+        }
+
+        ListNode preNode = pHead.next;
+        ListNode postNode = pHead.next.next;
+        // 找到相遇点
+        while (preNode != postNode) {
+            preNode = preNode.next;
+            postNode = postNode.next.next;
+        }
+        // 将其中一个指针指向头结点
+        postNode = pHead;
+        // 步长都为1，同时往后走，直到两者相遇
+        // 相遇点就是入口
+        while (preNode != postNode) {
+            preNode = preNode.next;
+            postNode = postNode.next;
+        }
+        targetNode = preNode;
+
+        return targetNode;
+    }
+
+    /**
      * 方式二，遍历将扫描后的节点存储到List中，若List中已经存在，则这个为入口
      */
-    static ListNode entryNodeOfLoop(ListNode pHead) {
+    static ListNode entryNodeOfLoop2(ListNode pHead) {
         if (pHead == null || pHead.next == null) {
             return null;
         }
