@@ -12,13 +12,9 @@
     <modules>
         <module>LRUCache</module>
         <module>Grouping</module>
-        <module>TwoSum</module>
-        <module>NumberReverse</module>
-        <module>Palindrome</module>
-        <module>NumberReverseString</module>
-        <module>FibonaccSequence</module>
-        <module>NumEquivDominoPairs</module>
         <module>List</module>
+        <module>Algorithm</module>
+        <module>Array</module>
     </modules>
 
     <dependencies>
