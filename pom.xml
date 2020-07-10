@@ -15,6 +15,7 @@
         <module>List</module>
         <module>Algorithm</module>
         <module>Array</module>
+        <module>Stack</module>
     </modules>
 
     <dependencies>
