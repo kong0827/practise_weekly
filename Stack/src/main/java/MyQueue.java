@@ -18,21 +18,26 @@ public class MyQueue {
         myQueue.add(6);
         myQueue.add(7);
         myQueue.add(8);
+        System.out.println("size:" + myQueue.size);
 
         System.out.println(myQueue.poll());
+        System.out.println("size:" + myQueue.size);
         myQueue.add(9);
+        System.out.println("size:" + myQueue.size);
         System.out.println(myQueue.poll());
-
+        System.out.println("size:" + myQueue.size);
     }
 
     Stack<Integer> stack1 = new Stack<>();
     Stack<Integer> stack2 = new Stack<>();
+    int size = 0;
 
     /**
      * 入队列
      */
     public void add(Integer num) {
         stack1.add(num);
+        size++;
     }
 
 
@@ -44,11 +49,13 @@ public class MyQueue {
             return null;
         }
         if (!stack2.isEmpty() && stack1.isEmpty()) {
+            size--;
             return stack2.pop();
         }
         while (!stack1.isEmpty()) {
             stack2.add(stack1.pop());
         }
+        size--;
         return stack2.pop();
     }
 }
