@@ -16,6 +16,7 @@
         <module>Algorithm</module>
         <module>Array</module>
         <module>Stack</module>
+        <module>String</module>
     </modules>
 
     <dependencies>
