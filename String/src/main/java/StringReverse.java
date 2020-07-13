@@ -7,6 +7,18 @@
  */
 public class StringReverse {
     public static void main(String[] args) {
+        System.out.println(reverseString("I am a student."));
+    }
 
+    static String reverseString(String str) {
+        if (str == null) {
+            return null;
+        }
+        String[] s = str.split(" ");
+        String temp = "";
+        for (int i = s.length - 1; i >= 0; i--) {
+            temp += s[i] + " ";
+        }
+        return temp;
     }
 }
