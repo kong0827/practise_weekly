@@ -15,7 +15,7 @@
         <module>List</module>
         <module>Algorithm</module>
         <module>Array</module>
-        <module>Stack</module>
+        <module>StackAndQueue</module>
         <module>String</module>
     </modules>
 
