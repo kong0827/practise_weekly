@@ -33,6 +33,7 @@ public class QuickSort {
                 arr[j] = arr[i];
                 arr[i] = t;
             }
+        }
 
             // 最后将基准位与i和j相等位置进行数字交换
             arr[low] = arr[i];
@@ -41,7 +42,6 @@ public class QuickSort {
             quickSort(arr, low, j - 1);
             // 递归调用右半数组
             quickSort(arr, j + 1, high);
-        }
 
     }
 
