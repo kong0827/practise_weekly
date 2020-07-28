@@ -9,7 +9,11 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+<<<<<<< HEAD
     <artifactId>Tree</artifactId>
+=======
+    <artifactId>com.kxj</artifactId>
+>>>>>>> 0c5c19c6f4df14fd94c1b496d148696284b5d469
 
 
 </project>
