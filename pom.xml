@@ -17,6 +17,7 @@
         <module>Array</module>
         <module>StackAndQueue</module>
         <module>String</module>
+        <module>Tree</module>
     </modules>
 
     <dependencies>
