@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author xiangjin.kong
  * @date 2020/6/12 16:03
@@ -16,6 +19,9 @@ public class FibonaccSequenceTest {
 
         int solution2 = solution2(10);
         System.out.println(solution2);
+
+        List list = new ArrayList<>();
+        list.add(1);
     }
 
     /**

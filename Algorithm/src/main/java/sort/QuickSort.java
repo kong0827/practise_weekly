@@ -36,8 +36,8 @@ public class QuickSort {
         }
 
             // 最后将基准位与i和j相等位置进行数字交换
-            arr[low] = arr[i];
-            arr[i] = temp;
+            arr[low] = arr[j];
+            arr[j] = temp;
             // 递归调用左半数组
             quickSort(arr, low, j - 1);
             // 递归调用右半数组
