@@ -32,7 +32,6 @@ public class OneDimensionArrayDynamicSum {
         int[] newNums = runningSum(nums);
         for (int newNum : newNums) {
             System.out.println(newNum);
-
         }
     }
 
