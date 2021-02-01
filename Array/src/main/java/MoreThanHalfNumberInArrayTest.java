@@ -1,5 +1,6 @@
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 /**
  * @author kxj
@@ -10,22 +11,27 @@ import java.util.Map;
  */
 public class MoreThanHalfNumberInArrayTest {
     public static void main(String[] args) {
-        int[] array = {1, 2, 3, 2, 2, 2, 5, 4, 2};
+        int[] array = {2, 2, 1, 1, 1, 2, 2};
         int number = getMoreThanHalfNumberInArray(array);
         System.out.println(number);
     }
 
-    static int getMoreThanHalfNumberInArray(int[] array) {
-        Map<Integer, Integer> map = new HashMap();
-        for (int i = 0; i < array.length; i++) {
-            if (map.containsKey(array[i])) {
-                Integer value = map.get(array[i]) + 1;
-                if (value > array.length / 2) {
-                    return array[i];
+    static int getMoreThanHalfNumberInArray(int[] nums) {
+        if (nums.length == 0) {
+            return 0;
+        }
+        if (nums.length == 1) {
+            return nums[0];
+        }
+        Map<Integer, Integer> map = new HashMap<>(16);
+        for (int i = 0; i < nums.length; i++) {
+            if (map.containsKey(nums[i])) {
+                map.put(nums[i], map.get(nums[i]) + 1);
+                if (map.get(nums[i]) > (nums.length / 2)) {
+                    return nums[i];
                 }
-                map.put(array[i], value);
             } else {
-                map.put(array[i], 1);
+                map.put(nums[i], 1);
             }
         }
         return 0;
