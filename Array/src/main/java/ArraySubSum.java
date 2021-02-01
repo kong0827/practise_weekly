@@ -6,7 +6,7 @@ package com.kxj;
  * @desc 给定一个整数数组，求其下标为m 到 下标到n 的和
  * 要求时间复杂度为o(n)
  */
-public class ArraySubSumTest {
+public class ArraySubSum {
     public static void main(String[] args) {
         int[] array = {1, 2, 3, 4, 5, 6};
         int sum = subArraySum(array, 2, 4);

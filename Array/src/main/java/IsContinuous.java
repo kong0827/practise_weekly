@@ -7,7 +7,7 @@ import java.util.Arrays;
  * <p>
  * 2-10为数字本身，A为1，J为11...大小王可以看成任何数字，可以把它当作0处理
  */
-public class IsContinuousTest {
+public class IsContinuous {
     public static void main(String[] args) {
         int[] numbers1 = {1, 3, 2, 5, 4};
         System.out.println(isContinuous(numbers1));

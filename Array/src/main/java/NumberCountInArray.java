@@ -3,7 +3,7 @@
  * @date 2020/7/7 0:26
  * @desc 统计一个数字在排序数组中出现的次数
  */
-public class NumberCountInArrayTest {
+public class NumberCountInArray {
 
     public static void main(String[] args) {
         int nums[] = new int[]{1, 2, 3, 3, 3, 3, 4, 5};

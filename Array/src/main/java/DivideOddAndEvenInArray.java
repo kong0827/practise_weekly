@@ -13,7 +13,7 @@ import java.util.Arrays;
  * 当start>end时，完成交换
  *
  */
-public class DivideOddAndEvenInArrayTest {
+public class DivideOddAndEvenInArray {
 
     public static void main(String[] args) {
         int[] array = {2, 4, 7, 9, 6, 8};
