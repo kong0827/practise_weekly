@@ -59,7 +59,7 @@ public class MinKNumber {
     }
 
     // 快排切分，返回下标j，使得比nums[j]小的数都在j的左边，比nums[j]大的数都在j的右边。
-    private int partition(int[] nums, int lo, int hi) {
+    private static int partition(int[] nums, int lo, int hi) {
         int v = nums[lo];
         int i = lo, j = hi + 1;
         while (true) {
