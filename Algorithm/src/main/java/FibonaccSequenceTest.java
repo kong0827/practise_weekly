@@ -10,6 +10,9 @@ import java.util.List;
  * <p>
  * 2、升级版
  * 一只青蛙跳台阶，一次可以跳1阶，可以2阶，其能力足够强大以至于一次可以跳n阶。那么，台阶为n时，有多少种跳法。
+ *
+ * 上到第n个台阶的那一步，只能从n-1跳一个 或者 n-2 跳两个
+ *
  */
 public class FibonaccSequenceTest {
 
