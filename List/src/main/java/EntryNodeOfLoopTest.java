@@ -42,7 +42,7 @@ public class EntryNodeOfLoopTest {
      * 方式一：快慢指针
      */
     static ListNode entryNodeOfLoop(ListNode pHead){
-        ListNode targetNode = new ListNode(3);
+        ListNode targetNode;
         if (pHead == null || pHead.next == null) {
             return null;
         }
