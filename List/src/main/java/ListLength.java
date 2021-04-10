@@ -9,12 +9,11 @@ public class ListLength {
 
     @Test
     public void test() {
-        ListNode listNode1 = new ListNode();
-        listNode1.value = 1;
-        ListNode listNode2 = new ListNode();
-        listNode2.value = 2;
-        ListNode listNode3 = new ListNode();
-        listNode3.value = 3;
+        ListNode listNode1 = new ListNode(1);
+        ListNode listNode2 = new ListNode(2);
+        listNode1.next = listNode2;
+        ListNode listNode3 = new ListNode(3);
+        listNode2.next = listNode3;
         int length = getLength(listNode1);
         System.out.println(length);
     }
@@ -24,10 +23,11 @@ public class ListLength {
             return 0;
         }
 
-        int length = 0;
-        while (head.next != null) {
+        int length = 1;
+        ListNode newHead = head.next;
+        while (newHead != null) {
             length++;
-            head = head.next;
+            newHead = newHead.next;
         }
         return length;
     }
