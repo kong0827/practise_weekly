@@ -13,9 +13,19 @@ import org.junit.Test;
 public class LRUCacheTest {
     @Test
     public void test1() {
-        LRUCache lruCache = new LRUCache(2);
+        LRUCache lruCache = new LRUCache(10);
         lruCache.put(1, 'a');
         lruCache.put(2, 'b');
+        lruCache.put(3, 'b');
+        lruCache.put(4, 'b');
+        lruCache.put(5, 'b');
+        lruCache.put(6, 'b');
+        lruCache.put(7, 'b');
+        lruCache.put(8, 'b');
+        lruCache.put(9, 'b');
+        lruCache.put(18, 'b');
+        lruCache.put(28, 'b');
+
         String result = lruCache.get(1);
         Assert.assertEquals('a', result);
         result = lruCache.get(2);
