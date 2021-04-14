@@ -46,9 +46,7 @@ public class LRUCache {
      */
     public void put(int key, String value) {
         Map<Integer, String> map = new HashMap<>(10);
-        if (this.contain(list,  key)) {
-
-        }
+        distinct(key,value);
         map.put(key, value);
         ListNode<Map<Integer, String>> newNode = new ListNode<>(map);
         ListNode<Map<Integer, String>> newList = list;
@@ -57,6 +55,27 @@ public class LRUCache {
         length++;
         if (length > capacity) {
             deleteElementEnd();
+        }
+    }
+
+    /**
+     * 检查是否有重复元素
+     * @param key
+     * @param value
+     */
+    public void distinct(int key, String value) {
+        ListNode<Map<Integer, String>> newList = list;
+        ListNode<Map<Integer, String>> current = newList.next;
+        for (int i = 0; i < length; i++) {
+            Map<Integer, String> valueMap = current.value;
+            if (valueMap.containsKey(key)) {
+                valueMap.put(key, value);
+                current.value = valueMap;
+                newList.next = current;
+                return;
+            }
+            newList = newList.next;
+            current = newList.next;
         }
     }
 
@@ -84,10 +103,7 @@ public class LRUCache {
 
     public boolean contain(ListNode<Map<Integer, String>> list, int key) {
         Map<Integer, String> map = list.value;
-        if (map.containsKey(key)) {
-            return true;
-        }
-        return false;
+        return map.containsKey(key);
     }
 
     public void del(int key) {
