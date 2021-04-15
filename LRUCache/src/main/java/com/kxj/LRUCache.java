@@ -1,6 +1,8 @@
 package com.kxj;
 
 
+import org.junit.jupiter.api.Test;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -17,7 +19,13 @@ public class LRUCache {
      * lru的容量
      */
     private int capacity;
+    /**
+     * 链表真实长度
+     */
     private int length;
+    /**
+     * 链表
+     */
     private ListNode<Map<Integer, String>> list;
 
     public LRUCache(int capacity) {
@@ -46,7 +54,9 @@ public class LRUCache {
      */
     public void put(int key, String value) {
         Map<Integer, String> map = new HashMap<>(10);
-        distinct(key,value);
+        if (distinct(key, value)) {
+            return;
+        }
         map.put(key, value);
         ListNode<Map<Integer, String>> newNode = new ListNode<>(map);
         ListNode<Map<Integer, String>> newList = list;
@@ -60,23 +70,34 @@ public class LRUCache {
 
     /**
      * 检查是否有重复元素
+     *
      * @param key
      * @param value
      */
-    public void distinct(int key, String value) {
+    public boolean distinct(int key, String value) {
         ListNode<Map<Integer, String>> newList = list;
-        ListNode<Map<Integer, String>> current = newList.next;
+        if (length == 0) {
+            return false;
+        }
+        if (list.value.containsKey(key)) {
+            Map<Integer, String> map = new HashMap<>();
+            map.put(key, value);
+            list.value = map;
+            return true;
+        }
+        ListNode<Map<Integer, String>> current = list.next;
         for (int i = 0; i < length; i++) {
             Map<Integer, String> valueMap = current.value;
-            if (valueMap.containsKey(key)) {
+            if (valueMap != null && valueMap.containsKey(key)) {
                 valueMap.put(key, value);
                 current.value = valueMap;
                 newList.next = current;
-                return;
+                return true;
             }
             newList = newList.next;
-            current = newList.next;
+            current = current.next;
         }
+        return false;
     }
 
     /**
@@ -135,6 +156,5 @@ public class LRUCache {
         this.list = null;
         this.length = 0;
     }
-
 
 }
