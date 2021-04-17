@@ -26,10 +26,14 @@ public class LRUCacheTest {
         lruCache.put(10, "j");
         String result = lruCache.get(1);
         Assert.assertEquals("a", result);
-
+        lruCache.display();
+        System.out.println("-------------");
         lruCache.put(11, "k");
+        lruCache.display();
+        System.out.println("-------------");
         lruCache.del(3);
-
+        lruCache.display();
+        System.out.println("-------------");
         result = lruCache.get(1);
         Assert.assertNull(result);
         result = lruCache.get(2);

@@ -157,4 +157,15 @@ public class LRUCache {
         this.length = 0;
     }
 
+    public void display() {
+        if (list == null) {
+            return;
+        }
+        ListNode<Map<Integer, String>> newList = list;
+        while (newList != null) {
+            System.out.println(newList.value);
+            newList = newList.next;
+        }
+    }
+
 }
