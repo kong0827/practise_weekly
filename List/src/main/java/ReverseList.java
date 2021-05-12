@@ -32,11 +32,23 @@ public class ReverseList {
             return head;
         }
         ListNode temp = head.next;
-        ListNode newHead = reverseList2(head.next);
+        ListNode last = reverseList2(head.next);
         temp.next = head;
         head.next = null;
-        return newHead;
+        return last;
     }
+
+    /**
+     * ListNode reverse(ListNode head) {
+     *     if (head.next == null) return head;
+     *     ListNode last = reverse(head.next);
+     *     head.next.next = head;
+     *     head.next = null;
+     *     return last;
+     * }
+     * @param head
+     * @return
+     */
 
     ListNode reverse(ListNode head) {
         if (head == null || head.next == null) {

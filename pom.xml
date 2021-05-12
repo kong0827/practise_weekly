@@ -18,6 +18,7 @@
         <module>StackAndQueue</module>
         <module>String</module>
         <module>Tree</module>
+        <module>LinkedList</module>
     </modules>
 
     <dependencies>
