@@ -17,16 +17,13 @@ public class Demo_03_ReverseMToNList {
      * @return
      */
 
-    // 前驱
-    ListNode pre = null;
-    // 后继节点
-    ListNode successor = null;
-
     ListNode reverse(ListNode head, int m, int n) {
+        // base case
         if (m == 1) {
             Demo_02_ReverseNList reverseNList = new Demo_02_ReverseNList();
             return reverseNList.reverse(head, n);
         }
+        // 前进到反转的起点触发 base case
         head.next = reverse(head.next, m - 1, n - 1);
         return head;
     }
@@ -34,7 +31,7 @@ public class Demo_03_ReverseMToNList {
     @Test
     public void test() {
         ListNode listNode = MockNodeList.create();
-        ListNode node = reverse(listNode, 2,4);
+        ListNode node = reverse(listNode, 3,5);
         System.out.println(node);
     }
 
