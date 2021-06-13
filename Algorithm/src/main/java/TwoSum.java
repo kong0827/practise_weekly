@@ -23,8 +23,8 @@ public class TwoSum {
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-       int[] nums = {2, 7, 11, 15};
-        int[] result = twoSum2(nums, 9);
+       int[] nums = {3,3};
+        int[] result = twoSum2(nums, 6);
         System.out.println(result[0] + " " + result[1]);
 
     }
